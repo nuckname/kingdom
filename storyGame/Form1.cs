@@ -15,7 +15,7 @@ namespace storyGame
         private Dictionary<string, Events> currentDictionary = null;
         private string eventRandomlyPicked;
         private int[] kingdomCurrentValues;
-        //this returns null.
+        //this returns null. 
         public PictureBox[] pictureBoxes;
 
 
@@ -62,9 +62,6 @@ namespace storyGame
             
             int listPicker = 0;
 
-
-            //int randomNumberINT;
-
             static string randomEventPicked(Dictionary<string, Events> eventDict)
             {
                 Random random = new Random();
@@ -98,7 +95,7 @@ namespace storyGame
 
             }
             
-
+            //This can be better
             switch (listPicker)
             {
                 case 0:
@@ -174,7 +171,6 @@ namespace storyGame
                     if (userDecision == false)
                     {
                         //need to add karma as a stat.
-                        //kingdom class
                         kingdomCurrentValues[0] -= dictionary[eventPicked].NOhealth;
                         kingdomCurrentValues[1] -= dictionary[eventPicked].NOhappiness;
                         kingdomCurrentValues[2] -= dictionary[eventPicked].NOpopulation;
@@ -212,8 +208,6 @@ namespace storyGame
             string buttonText = button.Text;
             return buttonText;
         }
-        //btw creating two variables for userDecision.
-
         public void btnOptionYes_Click(object sender, EventArgs e)
         {
             if (button_Click(sender, e) == "Yes")
